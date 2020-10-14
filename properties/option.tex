@@ -1,6 +1,14 @@
 \mode<presentation> {
-\usetheme{Pittsburgh}
-\usecolortheme{dolphin}
-\setbeamertemplate{footline}[page number]
-\setbeamertemplate{navigation symbols}{}
+    \usetheme{Pittsburgh}
+    \usecolortheme{dolphin}
+    \setbeamertemplate{footline}[page number]
+    \setbeamertemplate{navigation symbols}{}
+}
+
+\newcommand*{\captionsource}[2]{%
+  \caption[{#1}]{%
+    #1%
+    \\\hspace{\linewidth}%
+    \textbf{Source:} #2%
+  }%
 }
