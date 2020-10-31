@@ -1,74 +1,3 @@
-
-\section{Overview}
-\subsection{Human Action Recognition}
-\begin{frame}{Human Action Recognition}
-    Human action recognition (HAR) can be divided into action classification and action detection.
-
-    \begin{enumerate}
-        \item<1-> Action classification is the analysis of a segmented video containing only a single action that must be classified into a defined action category (early).
-              \only<1>{
-                  \begin{figure}[htp]
-                      \centering
-                      \includegraphics[width=0.6\textwidth]{images/paper/zhang2019comprehensive/action-classification.png}
-                      \caption{Action classification}
-                      \label{fig:action-classification}
-                  \end{figure}
-              }
-        \item<2-> Action detection detects the start and end times of each action in the video, locates their position in space, and identifies the action category (more challenging).
-              \only<2>{
-                  \begin{figure}[htp]
-                      \centering
-                      \includegraphics[width=0.8\textwidth]{images/paper/zhang2019comprehensive/action-detection.jpg}
-                      \caption{Action detection}
-                      \label{fig:action-dectection}
-                  \end{figure}
-              }
-    \end{enumerate}
-
-
-\end{frame}
-
-\begin{frame}{Human Action Recognition}
-    Techniques can be categorized into the following four classes of action semantics from low to high:
-    \begin{itemize}
-        \item Primitive action recognition (waving, lifting a foot, bending).
-        \item Single-person action recognition (walking, punching, jumping).
-        \item Interaction recognition (playing an instrument, carrying a knife).
-        \item Group action recognition (parade, group meeting).
-    \end{itemize}
-\end{frame}
-
-\subsection{Applications of HAR}
-\begin{frame}{Applications of HAR}
-    \begin{figure}[htp]
-        \centering
-        \includegraphics[width=0.7\textwidth]{images/paper/zhang2019comprehensive/application.png}
-        \caption{Applications}
-        \label{fig:applications}
-    \end{figure}
-\end{frame}
-
-\subsection{Type of Dataset}
-\begin{frame}{Type of Dataset}
-
-    Most reviews of human action recognition are limited to approaches based on specific data: RGB, Skeleton, Depth \cite{shahroudy2016ntu}.
-
-    \begin{multicols}{2}
-        \begin{figure}[htp]
-            \centering
-            \includegraphics[height=4cm]{images/paper/zhang2019comprehensive/depth_data_ex.png}
-            \caption{Depth data}
-            \label{fig:depth_data_ex}
-        \end{figure}
-        \begin{figure}[htp]
-            \centering
-            \includegraphics[height=4cm]{images/paper/zhang2019comprehensive/skeleton_data_ex.png}
-            \caption{Skeleton data}
-            \label{fig:skeleton_data_ex}
-        \end{figure}
-    \end{multicols}
-\end{frame}
-
 \section{Feature representation}
 \subsection{Handcrafted Action Features}
 \begin{frame}{Handcrafted Action Features (RGB)}
@@ -77,12 +6,12 @@
               \only<1>{
                   \begin{figure}[htp]
                       \centering
-                      \includegraphics[height=2.25cm, width=10cm]{images/paper/zhang2019comprehensive/mei.png}
+                      \includegraphics[height=2.25cm, width=10cm]{topics/201010-zhang2019comprehensive/assets/img/mei.png}
                       \caption{Motion history image}
                   \end{figure}
                   \begin{figure}[htp]
                       \centering
-                      \includegraphics[height=2.25cm, width=10cm]{images/paper/zhang2019comprehensive/mhi.png}
+                      \includegraphics[height=2.25cm, width=10cm]{topics/201010-zhang2019comprehensive/assets/img/mhi.png}
                       \caption{Motion energy image}
                   \end{figure}
               }
@@ -92,7 +21,7 @@
               \only<2>{
                   \begin{figure}[htp]
                       \centering
-                      \includegraphics[width=0.6\textwidth]{images/paper/zhang2019comprehensive/sift.png}
+                      \includegraphics[width=0.6\textwidth]{topics/201010-zhang2019comprehensive/assets/img/sift.png}
                       \caption{Scale-invariance feature transform}
                   \end{figure}
               }
@@ -102,7 +31,7 @@
               \only<3>{
                   \begin{figure}[htp]
                       \centering
-                      \includegraphics[width=0.5\textwidth]{images/paper/zhang2019comprehensive/joins-trajectory.png}
+                      \includegraphics[width=0.5\textwidth]{topics/201010-zhang2019comprehensive/assets/img/joins-trajectory.png}
                       \caption{Scale-invariance feature transform}
                   \end{figure}
               }
@@ -126,7 +55,7 @@
 \begin{frame}{3D convolutional networks}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.5\textwidth]{images/paper/zhang2019comprehensive/3d-cnn.png}
+        \includegraphics[width=0.5\textwidth]{topics/201010-zhang2019comprehensive/assets/img/3d-cnn.png}
         \caption{3D convolutional networks}
     \end{figure}
 \end{frame}
@@ -134,7 +63,7 @@
 \begin{frame}{Two-stream convolutional networks}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/2-stream-cnn.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/2-stream-cnn.png}
         \caption{Two-stream convolutional networks}
     \end{figure}
 \end{frame}
@@ -143,27 +72,27 @@
     \frametitle{Long short-term memory (LSTM)}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/RNN-unrolled.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/RNN-unrolled.png}
         \caption{RNN}
     \end{figure}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/LSTM-1.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/LSTM-1.png}
         \caption{Forget gate layer}
     \end{figure}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/LSTM-2.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/LSTM-2.png}
         \caption{Input gate layer}
     \end{figure}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/LSTM-3.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/LSTM-3.png}
         \caption{Update gate layer}
     \end{figure}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/LSTM-4.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/LSTM-4.png}
         \caption{Output gate layer}
     \end{figure}
 \end{frame}
@@ -173,7 +102,7 @@
 \begin{frame}{Graph-based machine learning}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.7\textwidth]{images/paper/zhang2019comprehensive/real-graph.png}
+        \includegraphics[width=0.7\textwidth]{topics/201010-zhang2019comprehensive/assets/img/real-graph.png}
         \caption{Application}
         \label{fig:application}
     \end{figure}
@@ -187,7 +116,7 @@
     \end{itemize}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.7\textwidth]{images/paper/zhang2019comprehensive/graph.png}
+        \includegraphics[width=0.7\textwidth]{topics/201010-zhang2019comprehensive/assets/img/graph.png}
         \caption{Graph}
         \label{fig:graph}
     \end{figure}
@@ -200,7 +129,7 @@
 
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.8\textwidth]{images/paper/zhang2019comprehensive/concrete_plot.png}
+        \includegraphics[width=0.8\textwidth]{topics/201010-zhang2019comprehensive/assets/img/concrete_plot.png}
         \caption{Concrete examples}
     \end{figure}
 \end{frame}
@@ -208,7 +137,7 @@
 \begin{frame}{Graph-based neural network}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.8\textwidth]{images/paper/zhang2019comprehensive/euclid_space.png}
+        \includegraphics[width=0.8\textwidth]{topics/201010-zhang2019comprehensive/assets/img/euclid_space.png}
         \caption{Embedding}
     \end{figure}
 \end{frame}
@@ -216,7 +145,7 @@
 \begin{frame}{Graph-based neural network - Word embeeding}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.8\textwidth]{images/paper/zhang2019comprehensive/context-word.png}
+        \includegraphics[width=0.8\textwidth]{topics/201010-zhang2019comprehensive/assets/img/context-word.png}
         \caption{Context word}
     \end{figure}
 \end{frame}
@@ -225,13 +154,13 @@
     \begin{multicols}{2}
         \begin{figure}[htp]
             \centering
-            \includegraphics[width=0.4\textwidth]{images/paper/zhang2019comprehensive/cbow.png}
+            \includegraphics[width=0.4\textwidth]{topics/201010-zhang2019comprehensive/assets/img/cbow.png}
             \caption{CBOW}
         \end{figure}
 
         \begin{figure}[htp]
             \centering
-            \includegraphics[width=0.4\textwidth]{images/paper/zhang2019comprehensive/skip-gram.png}
+            \includegraphics[width=0.4\textwidth]{topics/201010-zhang2019comprehensive/assets/img/skip-gram.png}
             \caption{Skip-gram}
         \end{figure}
     \end{multicols}
@@ -241,7 +170,7 @@
     DeepWalk (Perozzi et al., 2014) is introduced to learn node embeddings via a random walk and word2vec (Mikolo et al., 2013) word2vec algorithm.
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=\textwidth]{images/paper/zhang2019comprehensive/deepwalk.png}
+        \includegraphics[width=\textwidth]{topics/201010-zhang2019comprehensive/assets/img/deepwalk.png}
         \caption{DeepWalk}
     \end{figure}
 \end{frame}
@@ -249,7 +178,7 @@
 \begin{frame}{Graph-based neural network - Node2Vec}
     \begin{figure}[htp]
         \centering
-        \includegraphics[width=0.6\textwidth]{images/paper/zhang2019comprehensive/p-q-param.png}
+        \includegraphics[width=0.6\textwidth]{topics/201010-zhang2019comprehensive/assets/img/p-q-param.png}
         \caption{p q param}
     \end{figure}
 \end{frame}
