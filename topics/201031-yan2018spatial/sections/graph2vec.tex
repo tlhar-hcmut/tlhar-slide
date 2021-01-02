@@ -1,7 +1,7 @@
 \section{Graph convolutional neural network (HAR)}
 
 \subsection{Skeleton Graph Construction}
-\begin{frame}{Skeleton Graph Construction}
+\begin{frame}{TS-GCN - Skeleton Graph Construction}
     \begin{multicols} {2}
         \begin{enumerate}
             \item $V = \{v_{ti} | t = 1,...,T; i = 1,...,N\}$
@@ -25,24 +25,36 @@
     \end{multicols}
 \end{frame}
 
-\subsection{Spatial Graph Convolutional Neural Network}
-\begin{frame}{Spatial Graph Convolutional Neural Network}
-    \begin{block}{Graph convolutional operation}
-        $$f_{out}(v_{ti}) = \frac{1}{|B(v_{ti})|} \sum_{v_{tj} \in B(v_{ti})} f_{in}(v_{tj}) \times w(l_{ti}(v_{tj}))$$
+\subsection{Graph Convolutional Operation}
+\begin{frame}{TS-GCN - Graph Convolutional Operation}
+    \begin{block}{Graph convolutional operation \cite{yan2018spatial}}
+        $$f_{out}(v_{ti}) = \sum_{v_{tj} \in B(v_{ti})} \frac{1}{Z_{tj}} \times f_{in}(v_{tj}) \times w(l_{ti}(v_{tj}))$$
         \begin{itemize}
-            \item $B(v_{ti}) = \{v_{tj} | d(v_{ti}, v_{tj}) <= D\}$ (In this work we use D = 1)
+            \item $B(v_{ti}) = \{v_{qj} | d(v_{ti}, v_{tj}) <= D; |q - t| <= E\}\}$ (In this work we use D = 1)
             \item $w$ is the weight function provides a weight vector.
             \item $l_{ti}$ is the partitioning function.
         \end{itemize}
     \end{block}
 \end{frame}
 
-\begin{frame}{Spatial Graph Convolutional Neural Network}
-    Several partition strategies: b) Uni-labeling, c) Distance partitioning, d) Spatial configuration partitioning.
+\begin{frame}{TS-GCN Partition Strategies}
+    Several partition strategies  \cite{yan2018spatial}:
+
+    b) Uni-labeling, c) Distance partitioning, d) Spatial configuration partitioning.
     \begin{figure}[htp]
         \centering
         \includegraphics[width=0.7\textwidth]{topics/201031-yan2018spatial/assets/img/gcn-partition.png}
         \caption{Partition Strategies}
+        \label{fig:partition-strategies}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{AGCN}
+    \begin{figure}[htp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{topics/201031-yan2018spatial/assets/img/agcn.png}
+        \caption{AGCN}
         \label{fig:partition-strategies}
     \end{figure}
 \end{frame}
